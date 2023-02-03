@@ -1,5 +1,4 @@
 import { BrowserRouter } from 'react-router-dom'
-import { Challenges } from './components/Challenges'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { Router } from './Router'
