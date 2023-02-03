@@ -1,14 +1,17 @@
-import { Challenges } from './components/Challenges'
+import { BrowserRouter } from 'react-router-dom'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
+import { Router } from './Router'
 import './styles/global.css'
 
 function App() {
   return (
     <>
-      <Header />
-      <Challenges />
-      <Footer />
+      <BrowserRouter>
+        <Header />
+        <Router />
+        <Footer />
+      </BrowserRouter>
     </>
   )
 }
