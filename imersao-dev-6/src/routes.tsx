@@ -1,9 +1,10 @@
-import { Route } from "react-router";
-import { Routes } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
 import { ConversorDeMoedas } from "./pages/ConversorDeMoedas";
 import { Home } from "./pages/Home";
 
-export function Router() {
+export function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
