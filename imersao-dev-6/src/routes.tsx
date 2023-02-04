@@ -1,12 +1,14 @@
-import { Routes, Route } from "react-router-dom";
-import { ConversorDeMoedas } from "./pages/ConversorDeMoedas";
-import { Home } from "./pages/Home";
+import { Routes, Route } from 'react-router-dom';
+import { ConversorDeMoedas } from './pages/ConversorDeMoedas';
+import { Home } from './pages/Home';
+import { Mentalista } from './pages/Mentalista';
 
 export default function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/conversorDeMoedas" element={<ConversorDeMoedas />} />
+      <Route path='/' element={<Home />} />
+      <Route path='/conversorDeMoedas' element={<ConversorDeMoedas />} />
+      <Route path='/mentalista' element={<Mentalista />} />
     </Routes>
-  )
+  );
 }
