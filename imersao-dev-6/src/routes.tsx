@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { Aluraflix } from './pages/Aluraflix';
+import { AluraflixFavoritos } from './pages/AluraflixFavoritos';
 import { ConversorDeMoedas } from './pages/ConversorDeMoedas';
 import { Home } from './pages/Home';
 import { Mentalista } from './pages/Mentalista';
@@ -11,6 +12,7 @@ export default function AppRoutes() {
       <Route path='/conversorDeMoedas' element={<ConversorDeMoedas />} />
       <Route path='/mentalista' element={<Mentalista />} />
       <Route path='/aluraflix' element={<Aluraflix />} />
+      <Route path='/aluraflixFavoritos' element={<AluraflixFavoritos />} />
     </Routes>
   );
 }
