@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { Aluraflix } from './pages/Aluraflix';
 import { ConversorDeMoedas } from './pages/ConversorDeMoedas';
 import { Home } from './pages/Home';
 import { Mentalista } from './pages/Mentalista';
@@ -9,6 +10,7 @@ export default function AppRoutes() {
       <Route path='/' element={<Home />} />
       <Route path='/conversorDeMoedas' element={<ConversorDeMoedas />} />
       <Route path='/mentalista' element={<Mentalista />} />
+      <Route path='/aluraflix' element={<Aluraflix />} />
     </Routes>
   );
 }
