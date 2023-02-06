@@ -13,6 +13,21 @@ export function Home() {
           <h2>Mentalista</h2>
         </div>
       </Link>
+      <Link to={'/aluraflix'}>
+        <div className='w-32 h-14 rounded bg-white border-black flex items-center justify-center p-2 text-center'>
+          <h2>Aluraflix</h2>
+        </div>
+      </Link>
+      <Link to={'/aluraflixFavoritos'}>
+        <div className='w-32 h-14 rounded bg-white border-black flex items-center justify-center p-2 text-center'>
+          <h2>Aluraflix Favoritos</h2>
+        </div>
+      </Link>
+      <Link to={'/tabelaDeClassificacao'}>
+        <div className='w-32 h-14 rounded bg-white border-black flex items-center justify-center p-2 text-center'>
+          <h2>Tabela de Classificacao</h2>
+        </div>
+      </Link>
     </div>
   );
 }
