@@ -1,4 +1,14 @@
+import { useEffect, useState } from 'react';
+
+const aleatorio = Math.random() * (10 - 1) + 1;
+const numeroAleatorio = Number(aleatorio.toFixed());
 export function Mentalista() {
+  const [chute, setChute] = useState(0);
+
+  useEffect(() => {
+    console.log(numeroAleatorio);
+  }, []);
+
   return (
     <div className='w-full h-[80vh] flex justify-center items-center flex-col'>
       <img
@@ -20,6 +30,20 @@ export function Mentalista() {
           className='mt-0 mb-3'
         />
       </div>
+
+      <label htmlFor='palpite'>Digite um número entro 0 e 10</label>
+      <br />
+      <input
+        type='text'
+        id='palpite'
+        onChange={(event) => setChute(Number(event.target.value))}
+      />
+
+      <span>
+        {chute == numeroAleatorio
+          ? `O ${chute} é o número aleatório`
+          : `O ${chute} não é o número aleatório`}
+      </span>
     </div>
   );
 }
