@@ -2,11 +2,34 @@ import { useEffect, useState } from 'react';
 
 const aleatorio = Math.random() * (10 - 1) + 1;
 const numeroAleatorio = Number(aleatorio.toFixed());
+
 export function Mentalista() {
   const [chute, setChute] = useState(0);
+  const [random, setRandom] = useState(0);
+
+  function randomNumberInRange(min = 0, max = 10) {
+    const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+    setRandom(randomNumber);
+  }
+  // const randomNumber = Math.floor(Math.random() * (10 - 0 + 1)) + 1;
+  console.log(random);
+
+  function handleForm(e: any) {
+    e.preventDefault(e);
+  }
+
+  function isRandomNumber(randomNumber: number, guess: number) {
+    if (randomNumber == guess) {
+      `O chute: ${guess} é igual ao número aleatório`;
+      console.log(`O chute: ${guess} é igual ao número aleatório`);
+    } else {
+      ('O chute não é igual ao número aleatório');
+      console.log('O chute não é igual ao número aleatório');
+    }
+  }
 
   useEffect(() => {
-    console.log(numeroAleatorio);
+    randomNumberInRange();
   }, []);
 
   return (
@@ -33,17 +56,16 @@ export function Mentalista() {
 
       <label htmlFor='palpite'>Digite um número entro 0 e 10</label>
       <br />
-      <input
-        type='text'
-        id='palpite'
-        onChange={(event) => setChute(Number(event.target.value))}
-      />
+      <form onSubmit={handleForm}>
+        <input
+          type='text'
+          id='palpite'
+          onChange={(event) => setChute(Number(event.target.value))}
+        />
+        <button onClick={() => isRandomNumber(random, chute)}>Chutar</button>
+      </form>
 
-      <span>
-        {chute == numeroAleatorio
-          ? `O ${chute} é o número aleatório`
-          : `O ${chute} não é o número aleatório`}
-      </span>
+      <span></span>
     </div>
   );
 }
