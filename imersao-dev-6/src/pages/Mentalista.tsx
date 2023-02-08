@@ -17,15 +17,15 @@ export function Mentalista() {
     e.preventDefault(e);
   }
 
-  function isRandomNumber(randomNumber: number, guess: number) {
-    if (guess < 0 || guess > 10) {
+  function isRandomNumber(randomNumber: number, chute: number) {
+    if (chute < 0 || chute > 10) {
       return setResposta(`O chute deve ser entre 0 e 10!`);
     }
 
-    if (randomNumber == guess) {
-      setResposta(`O chute: ${guess} é igual ao número aleatório!`);
+    if (randomNumber == chute) {
+      setResposta(`O chute: ${chute} é IGUAL ao número aleatório!`);
     } else {
-      setResposta('O chute não é igual ao número aleatório!');
+      setResposta(`O chute: ${chute} NÃO é igual ao número aleatório!`);
     }
   }
 
