@@ -18,10 +18,14 @@ export function Mentalista() {
   }
 
   function isRandomNumber(randomNumber: number, guess: number) {
+    if (guess < 0 || guess > 10) {
+      return setResposta(`O chute deve ser entre 0 e 10!`);
+    }
+
     if (randomNumber == guess) {
-      setResposta(`O chute: ${guess} é igual ao número aleatório`);
+      setResposta(`O chute: ${guess} é igual ao número aleatório!`);
     } else {
-      setResposta('O chute não é igual ao número aleatório');
+      setResposta('O chute não é igual ao número aleatório!');
     }
   }
 
@@ -47,23 +51,31 @@ export function Mentalista() {
       <div>
         <img
           src='https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/Ilustra%C3%A7%C3%A3o-c%C3%A9rebro+1.png'
-          className='mt-0 mb-3'
+          className='mt-0 mb-3 -z-10'
         />
       </div>
 
-      <label htmlFor='palpite'>Digite um número entro 0 e 10</label>
-      <br />
-      <form onSubmit={handleForm}>
-        <input
-          type='text'
-          id='palpite'
-          onChange={(event) => setChute(Number(event.target.value))}
-        />
-        <button onClick={() => isRandomNumber(random, chute)}>Chutar</button>
-      </form>
-      <br />
-
-      <span>{resposta}</span>
+      <div className='flex items-center justify-evenly flex-col w-80 h-[320px] m-3 p-3 absolute border-black bg-opacity-20 bg-white rounded'>
+        <label htmlFor='palpite'>Digite um número entro 0 e 10</label>
+        <form
+          onSubmit={handleForm}
+          className='w-full h-40 flex flex-col items-center justify-center gap-3'
+        >
+          <input
+            type='number'
+            id='palpite'
+            onChange={(event) => setChute(Number(event.target.value))}
+            className='flex w-[140px] text-center h-8 font-bold'
+          />
+          <button
+            onClick={() => isRandomNumber(random, chute)}
+            className='flex items-center justify-center w-[140px] h-14 rounded-lg p-3 bg-white font-semibold'
+          >
+            Chutar
+          </button>
+        </form>
+        <span className='font-medium text-lg text-center'>{resposta}</span>
+      </div>
     </div>
   );
 }
