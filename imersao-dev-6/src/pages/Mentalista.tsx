@@ -6,13 +6,12 @@ const numeroAleatorio = Number(aleatorio.toFixed());
 export function Mentalista() {
   const [chute, setChute] = useState(0);
   const [random, setRandom] = useState(0);
+  const [resposta, setResposta] = useState('Aperte em "Chute"');
 
   function randomNumberInRange(min = 0, max = 10) {
     const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
     setRandom(randomNumber);
   }
-  // const randomNumber = Math.floor(Math.random() * (10 - 0 + 1)) + 1;
-  console.log(random);
 
   function handleForm(e: any) {
     e.preventDefault(e);
@@ -20,11 +19,9 @@ export function Mentalista() {
 
   function isRandomNumber(randomNumber: number, guess: number) {
     if (randomNumber == guess) {
-      `O chute: ${guess} é igual ao número aleatório`;
-      console.log(`O chute: ${guess} é igual ao número aleatório`);
+      setResposta(`O chute: ${guess} é igual ao número aleatório`);
     } else {
-      ('O chute não é igual ao número aleatório');
-      console.log('O chute não é igual ao número aleatório');
+      setResposta('O chute não é igual ao número aleatório');
     }
   }
 
@@ -64,8 +61,9 @@ export function Mentalista() {
         />
         <button onClick={() => isRandomNumber(random, chute)}>Chutar</button>
       </form>
+      <br />
 
-      <span></span>
+      <span>{resposta}</span>
     </div>
   );
 }
