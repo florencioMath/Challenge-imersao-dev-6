@@ -77,7 +77,7 @@ export function Aluraflix() {
           className='w-52 mt-0 mb-3'
         />
       </div>
-      <div className=' flex flex-wrap bg-white bg-opacity-80 rounded items-center justify-evenly box-border gap-3 mb-3'>
+      <div className='flex content-start flex-wrap w-screen h-screen overflow-auto bg-white bg-opacity-80 rounded items-center justify-center box-border gap-3 mb-3'>
         {listaFilmes.map((filme, i) => {
           return (
             <div
