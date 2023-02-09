@@ -63,11 +63,11 @@ export function Aluraflix() {
   ];
 
   return (
-    <div className='w-full h-[80vh] flex justify-center items-center flex-col'>
+    <div className='w-full h-full flex justify-center items-center flex-col'>
       <img
         src='https://cdn.pixabay.com/photo/2014/11/30/17/15/theater-551797_960_720.jpg'
         alt=''
-        className='absolute -z-10 bg-no-repeat bg-center h-screen w-screen'
+        className='absolute -z-10 bg-no-repeat bg-center h-[120vh] w-screen'
       />
       <div className='flex flex-col items-center text-center p-5'>
         <h1 className='text-white mb-2 text-3xl'>Aluraflix</h1>
@@ -76,6 +76,23 @@ export function Aluraflix() {
           alt=''
           className='w-52 mt-0 mb-3'
         />
+      </div>
+      <div className=' flex flex-wrap bg-white bg-opacity-80 rounded items-center justify-evenly box-border gap-3 mb-3'>
+        {listaFilmes.map((filme, i) => {
+          return (
+            <div
+              key={filme.id}
+              className='w-52 p-2 bg-black flex flex-col items-center rounded mt-3 mb-3'
+            >
+              <h1 className='text-white text-center'>{filme.name}</h1>
+              <img
+                src={filme.URL}
+                alt={filme.name}
+                className='w-40 h-56 cursor-pointer hover:transition-all hover:border-white hover:border-[6px]'
+              />
+            </div>
+          );
+        })}
       </div>
     </div>
   );
