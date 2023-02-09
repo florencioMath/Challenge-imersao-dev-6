@@ -1,4 +1,10 @@
+import { FormEvent } from 'react';
+
 export function AluraflixFavoritos() {
+  function handleAddmovie(e: FormEvent) {
+    e.preventDefault();
+  }
+
   return (
     <div className='w-full h-[80vh] flex justify-center items-center flex-col'>
       <img
@@ -12,6 +18,26 @@ export function AluraflixFavoritos() {
           className='w-52 mt-0 mb-3'
         />
       </div>
+      <p className='text-white text-lg'>Qual seu filme favorito?</p>
+      <form onSubmit={handleAddmovie} className='flex flex-col gap-2 mt-4'>
+        <input
+          type='text'
+          name='image'
+          id='image'
+          className='rounded h-8 pl-2 pr-4'
+          placeholder='Insira a URL da imagem'
+        />
+        <input
+          type='text'
+          name='name'
+          id='name'
+          className='rounded h-8 pl-2 pr-4'
+          placeholder='Insira o Nome do filme'
+        />
+        <button className='text-white bg-red-600 rounded p-2 font-semibold hover:bg-red-800 mt-2'>
+          Adicionar filme
+        </button>
+      </form>
     </div>
   );
 }
