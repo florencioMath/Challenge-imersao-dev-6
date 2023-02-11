@@ -26,7 +26,6 @@ export function AluraflixFavoritos() {
     setMovieList(newMovies);
     setMovieName('');
     setMovieUrl('');
-    console.log(movieUrl);
   }
 
   return (
@@ -71,7 +70,7 @@ export function AluraflixFavoritos() {
           Adicionar filme
         </button>
       </form>
-      <div className='w-[90vw] max-h-[40vh] bg-white opacity-20 m-4 rounded overflow-auto p-4 flex flex-wrap gap-4'>
+      <div className='w-[90vw] h-[50vh] bg-white opacity-20 m-4 rounded overflow-auto flex flex-wrap gap-4'>
         {movieList.map((movie) => (
           <div
             key={movie.id}
