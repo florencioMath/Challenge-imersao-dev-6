@@ -34,7 +34,6 @@ This project was developed with the following technologies:
 - TypeScript
 - TailwindCSS
 
-- Expo
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LAYOUT -->
