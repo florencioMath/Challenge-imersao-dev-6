@@ -1,7 +1,6 @@
 <a name="readme-top"></a>
 <div align="center">
-<img src="...." alt="Imersão Dev logo" />
-<p>Imersão Dev 6</p>
+<img src="https://github.com/florencioMath/Challenge-imersao-dev-6/blob/main/readmeFiles/imersaoDevLogo.png?raw=true" alt="Imersão Dev logo" />
 </div>
 
 <!-- TABLE OF CONTENTS -->
