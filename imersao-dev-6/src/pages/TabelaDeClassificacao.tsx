@@ -1,7 +1,16 @@
 import { FormEvent, useState } from 'react';
 
 export function TabelaDeClassificacao() {
-  const [listOfPlayers, setListOfPlayers] = useState([{}]);
+  const [listOfPlayers, setListOfPlayers] = useState([
+    {
+      id: 0,
+      playerName: '',
+      vitorias: 0,
+      empates: 0,
+      derrotas: 0,
+      pontos: 0,
+    },
+  ]);
   const [playerName, setPlayerName] = useState('');
   const [vitorias, setvitorias] = useState(0);
   const [empates, setempates] = useState(0);
