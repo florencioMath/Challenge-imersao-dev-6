@@ -10,6 +10,11 @@ export function TabelaDeClassificacao() {
 
   function handleAdicinarJogador(e: FormEvent) {
     e.preventDefault();
+
+    if (playerName == '') {
+      return;
+    }
+
     const newListOfPLayers = [
       ...listOfPlayers,
       {
@@ -22,6 +27,7 @@ export function TabelaDeClassificacao() {
       },
     ];
     setListOfPlayers(newListOfPLayers);
+    setPlayerName('');
   }
 
   return (
@@ -45,6 +51,7 @@ export function TabelaDeClassificacao() {
         <input
           type='text'
           className='rounded h-9 pl-2 pr-4'
+          value={playerName}
           onChange={(e) => setPlayerName(e.target.value)}
         />
         <button
@@ -55,15 +62,15 @@ export function TabelaDeClassificacao() {
         </button>
       </form>
 
-      <table className='w-[90vw] bg-white opacity-25 rounded p-2 flex justify-around'>
+      <table className='w-[95vw] h-[50vh] overflow-auto bg-white opacity-50 rounded flex justify-around p-2'>
         <tbody>
-          <tr className='w-[90vw] border-black border-b-2  flex justify-around items-center mb-5 '>
-            <th className='border-x-2 border-black w-[20vw]'>Nome</th>
-            <th className='border-x-2 border-black w-[10vw]'>Vitórias</th>
-            <th className='border-x-2 border-black w-[10vw]'>Empates</th>
-            <th className='border-x-2 border-black w-[10vw]'>Derrotas</th>
-            <th className='border-x-2 border-black w-[10vw]'>Pontos</th>
-            <th className='border-x-2 border-black w-[30vw]'>Ações</th>
+          <tr className='w-[90vw] border-black border-b-2 flex justify-around items-center mb-2 bg-green-400'>
+            <th className='border-2 border-black w-[20vw]'>Nome</th>
+            <th className='border-2 border-black w-[10vw]'>Vitórias</th>
+            <th className='border-2 border-black w-[10vw]'>Empates</th>
+            <th className='border-2 border-black w-[10vw]'>Derrotas</th>
+            <th className='border-2 border-black w-[10vw]'>Pontos</th>
+            <th className='border-2 border-black w-[30vw]'>Ações</th>
           </tr>
           {listOfPlayers.length <= 1 ? (
             <>{''}</>
