@@ -102,7 +102,24 @@ export function TabelaDeClassificacao() {
                   <th className='border-2 border-black w-[10vw]'>
                     {player.pontos}
                   </th>
-                  <th className='border-2 border-black w-[30vw]'>Ações</th>
+
+                  <th className='border-2 border-black w-[30vw] flex items-center justify-evenly gap-1 flex-wrap p-1'>
+                    <button className='text-white bg-green-600 rounded p-1 font-semibold hover:bg-green-800'>
+                      Vitória
+                    </button>
+                    <button className='text-white bg-yellow-600 rounded p-1 font-semibold hover:bg-yellow-800'>
+                      Empate
+                    </button>
+                    <button className='text-white bg-red-600 rounded p-1 font-semibold hover:bg-red-800'>
+                      Derrota
+                    </button>
+                    <button className='text-white bg-gray-600 rounded p-1 font-semibold hover:bg-gray-800'>
+                      Zerar Pontos
+                    </button>
+                    <button className='text-white bg-black-600 rounded p-1 font-semibold hover:bg-black-800'>
+                      Apagar Jogador
+                    </button>
+                  </th>
                 </tr>
               );
             })
