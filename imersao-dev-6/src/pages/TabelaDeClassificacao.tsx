@@ -4,14 +4,14 @@ export function TabelaDeClassificacao() {
   const [listOfPlayers, setListOfPlayers] = useState([
     {
       id: 0,
-      playerName: '',
+      nomeDoJogador: '',
       vitorias: 0,
       empates: 0,
       derrotas: 0,
       pontos: 0,
     },
   ]);
-  const [playerName, setPlayerName] = useState('');
+  const [nomeDoJogador, setNomeDoJogador] = useState('');
   const [vitorias, setvitorias] = useState(0);
   const [empates, setempates] = useState(0);
   const [derrotas, setderrotas] = useState(0);
@@ -20,7 +20,7 @@ export function TabelaDeClassificacao() {
   function handleAdicinarJogador(e: FormEvent) {
     e.preventDefault();
 
-    if (playerName == '') {
+    if (nomeDoJogador == '') {
       return;
     }
 
@@ -28,7 +28,7 @@ export function TabelaDeClassificacao() {
       ...listOfPlayers,
       {
         id: ++listOfPlayers.length,
-        playerName,
+        nomeDoJogador,
         vitorias,
         empates,
         derrotas,
@@ -36,7 +36,7 @@ export function TabelaDeClassificacao() {
       },
     ];
     setListOfPlayers(newListOfPLayers);
-    setPlayerName('');
+    setNomeDoJogador('');
   }
 
   return (
@@ -60,8 +60,8 @@ export function TabelaDeClassificacao() {
         <input
           type='text'
           className='rounded h-9 pl-2 pr-4'
-          value={playerName}
-          onChange={(e) => setPlayerName(e.target.value)}
+          value={nomeDoJogador}
+          onChange={(e) => setNomeDoJogador(e.target.value)}
         />
         <button
           type='submit'
@@ -86,9 +86,9 @@ export function TabelaDeClassificacao() {
           ) : (
             listOfPlayers.map((player) => {
               return (
-                <tr key={player.id + player.playerName}>
+                <tr key={player.id + player.nomeDoJogador}>
                   <th className='border-2 border-black w-[20vw]'>
-                    {player.playerName}
+                    {player.nomeDoJogador}
                   </th>
                   <th className='border-2 border-black w-[10vw]'>
                     {player.vitorias}
