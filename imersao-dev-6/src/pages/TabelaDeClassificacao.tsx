@@ -8,8 +8,6 @@ export function TabelaDeClassificacao() {
   const [derrotas, setderrotas] = useState(0);
   const [pontos, setpontos] = useState(0);
 
-  console.log('listOfPlayers.length', listOfPlayers.length);
-
   function handleAdicinarJogador(e: FormEvent) {
     e.preventDefault();
     const newListOfPLayers = [
@@ -24,7 +22,6 @@ export function TabelaDeClassificacao() {
       },
     ];
     setListOfPlayers(newListOfPLayers);
-    console.log(listOfPlayers);
   }
 
   return (
