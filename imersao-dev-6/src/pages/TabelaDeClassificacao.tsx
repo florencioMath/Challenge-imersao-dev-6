@@ -60,6 +60,19 @@ export function TabelaDeClassificacao() {
     setPontos((player.pontos = 0));
   }
 
+  function handleExluirjogadores() {
+    setListOfPlayers([
+      {
+        id: 0,
+        nomeDoJogador: 'Matheus',
+        vitorias: 2,
+        empates: 1,
+        derrotas: 1,
+        pontos: 7,
+      },
+    ]);
+  }
+
   return (
     <div className='w-full h-[80vh] flex justify-center items-center flex-col'>
       <img
@@ -67,7 +80,7 @@ export function TabelaDeClassificacao() {
         className='absolute -z-10 bg-no-repeat bg-center h-screen w-screen'
       />
       <div className='flex flex-col items-center text-center p-5'>
-        <h1 className='text-white mb-2 text-3xl'>Tabela de Classificacao</h1>
+        <h1 className='text-white mb-2 text-3xl'>Tabela de Classificacão</h1>
         <img
           src='https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg'
           className='w-52 mt-0 mb-3'
@@ -92,9 +105,9 @@ export function TabelaDeClassificacao() {
         </button>
       </form>
 
-      <table className='w-[95vw] h-[50vh] overflow-auto bg-white opacity-50 rounded flex justify-around p-2'>
+      <table className='w-[95vw] h-[50vh] overflow-auto bg-white opacity-50 rounded flex justify-around p-2 mb-2'>
         <tbody>
-          <tr className='w-[90vw] border-black border-b-2 flex justify-around items-center mb-2'>
+          <tr className='w-[90vw] border-black flex justify-around items-center mb-2'>
             <th className='border-2 border-black w-[20vw]'>Nome</th>
             <th className='border-2 border-black w-[10vw]'>Vitórias</th>
             <th className='border-2 border-black w-[10vw]'>Empates</th>
@@ -121,7 +134,7 @@ export function TabelaDeClassificacao() {
                   {player.pontos}
                 </th>
 
-                <th className='border-2 border-black w-[30vw] flex items-center justify-evenly gap-1 flex-wrap p-1'>
+                <th className='border-2 border-black w-[30vw] flex items-center justify-around gap-1 flex-wrap p-1'>
                   <button
                     className='text-white bg-green-600 rounded p-1 font-semibold hover:bg-green-800'
                     onClick={() => {
@@ -157,6 +170,12 @@ export function TabelaDeClassificacao() {
           })}
         </tbody>
       </table>
+      <button
+        className='text-white bg-slate-600 rounded p-2 font-semibold hover:bg-slate-800'
+        onClick={handleExluirjogadores}
+      >
+        Exluir jogadores
+      </button>
     </div>
   );
 }
