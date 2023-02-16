@@ -60,6 +60,11 @@ export function TabelaDeClassificacao() {
     setPontos((player.pontos = 0));
   }
 
+  function handleExcluirjogador(player: any) {
+    const novosJogadores = listOfPlayers.filter((item) => item.id != player.id);
+    setListOfPlayers(novosJogadores);
+  }
+
   function handleExluirjogadores() {
     setListOfPlayers([
       {
@@ -161,7 +166,10 @@ export function TabelaDeClassificacao() {
                   >
                     Zerar Pontos
                   </button>
-                  <button className='text-white bg-black-600 rounded p-1 font-semibold hover:bg-black-800'>
+                  <button
+                    className='text-white bg-black rounded p-1 font-semibold hover:bg-black'
+                    onClick={() => handleExcluirjogador(player)}
+                  >
                     Apagar Jogador
                   </button>
                 </th>
