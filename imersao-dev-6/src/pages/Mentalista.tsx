@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-
-const aleatorio = Math.random() * (10 - 1) + 1;
-const numeroAleatorio = Number(aleatorio.toFixed());
+import backgroundMentalista from '../assets/images/background-mentalista.png';
+import logoMentalista from '../assets/images/logo-mentalista.png';
+import logoImersaoRed from '../assets/images/logo-imersao-red.svg';
 
 export function Mentalista() {
   const [chute, setChute] = useState(0);
@@ -36,23 +36,16 @@ export function Mentalista() {
   return (
     <div className='w-full h-[80vh] flex justify-center items-center flex-col'>
       <img
-        src='https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/background_mentalista.png'
+        src={backgroundMentalista}
         alt=''
         className='absolute -z-10 bg-no-repeat bg-center h-screen w-screen'
       />
       <div className='flex flex-col items-center text-center p-5'>
         <h1 className='text-white mb-2 text-3xl'>Mentalista</h1>
-        <img
-          src='https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg'
-          alt=''
-          className='w-52 mt-0 mb-3'
-        />
+        <img src={logoImersaoRed} alt='' className='w-52 mt-0 mb-3' />
       </div>
       <div>
-        <img
-          src='https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/Ilustra%C3%A7%C3%A3o-c%C3%A9rebro+1.png'
-          className='mt-0 mb-3 -z-10'
-        />
+        <img src={logoMentalista} className='mt-0 mb-3 -z-10' />
       </div>
 
       <div className='flex items-center justify-evenly flex-col w-80 h-[320px] m-3 p-3 absolute border-black bg-opacity-20 bg-white rounded'>
