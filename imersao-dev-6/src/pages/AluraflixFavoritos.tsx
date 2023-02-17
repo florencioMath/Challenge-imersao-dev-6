@@ -1,4 +1,6 @@
 import { FormEvent, useState } from 'react';
+import backgroundAluraflixFavoritos from '../assets/images/background-aluraflixFavoritos.png';
+import logoImersaoRed from '../assets/images/logo-imersao-red.svg';
 
 export function AluraflixFavoritos() {
   const [movieList, setMovieList] = useState([
@@ -31,15 +33,12 @@ export function AluraflixFavoritos() {
   return (
     <div className='w-full h-[80vh] flex justify-center items-center flex-col'>
       <img
-        src='https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-04-aluraflix-e-filmes.png'
+        src={backgroundAluraflixFavoritos}
         className='absolute -z-10 bg-no-repeat bg-center h-screen w-screen'
       />
       <div className='flex flex-col items-center text-center p-5'>
         <h1 className='text-white mb-2 text-3xl'>Aluraflix Favoritos</h1>
-        <img
-          src='https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg'
-          className='w-52 mt-0 mb-3'
-        />
+        <img src={logoImersaoRed} className='w-52 mt-0 mb-3' />
       </div>
       <p className='text-white text-lg'>Qual seu filme favorito?</p>
       <form
@@ -70,7 +69,7 @@ export function AluraflixFavoritos() {
           Adicionar filme
         </button>
       </form>
-      <div className='w-[90vw] h-[50vh] bg-white opacity-20 m-4 rounded overflow-auto flex flex-wrap gap-4'>
+      <div className='w-[90vw] h-[50vh] bg-white opacity-70 m-4 rounded overflow-auto flex flex-wrap gap-4'>
         {movieList.map((movie) => (
           <div
             key={movie.id}

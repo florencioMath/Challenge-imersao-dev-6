@@ -1,6 +1,9 @@
 import * as Toast from '@radix-ui/react-toast';
 import { useEffect, useRef, useState } from 'react';
 import { XSquare } from 'phosphor-react';
+import backgroundConversao from '../assets/images/background-conversao.png';
+import logoConversao from '../assets/images/logo-conversao.png';
+import logoImersaoRed from '../assets/images/logo-imersao-red.svg';
 
 export function ConversorDeMoedas() {
   let valorEmEthereum = 1;
@@ -38,23 +41,16 @@ export function ConversorDeMoedas() {
   return (
     <div className='w-full h-[80vh] flex justify-center items-center flex-col '>
       <img
-        src='https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/Background.png'
+        src={backgroundConversao}
         alt=''
         className='absolute -z-10 bg-no-repeat bg-center h-screen w-screen'
       />
       <div className='flex flex-col items-center text-center p-5'>
         <h1 className='text-white mb-2 text-3xl'>Conversor de Moedas</h1>
-        <img
-          src='https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg'
-          alt=''
-          className='w-52 mt-0 mb-3'
-        />
+        <img src={logoImersaoRed} alt='' className='w-52 mt-0 mb-3' />
       </div>
       <div>
-        <img
-          src='https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/Convers%C3%A3o+1.png'
-          className='mt-0 mb-3'
-        />
+        <img src={logoConversao} className='mt-0 mb-3' />
       </div>
 
       <div className='flex items-center justify-around flex-wrap flex-col gap-2'>
