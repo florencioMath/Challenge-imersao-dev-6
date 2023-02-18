@@ -42,25 +42,32 @@ This project was developed with the following technologies:
 <details>
 <summary>Take a look at how it turned out:</summary>
   <br>
-  Under construction!
-  <!--
   <tr>
     <td align="center">
-        <p align="center">Cinetag home</p>
-      <img src="https://github.com/florencioMath/Course-CineTag/blob/main/readmeFiles/cinetagHome.gif?raw=true"  alt="Cinetag home"/>
+        <p align="center">Conversor de Moedas</p>
+      <img src="https://github.com/florencioMath/Challenge-imersao-dev-6/blob/main/readmeFiles/imersaoDev6-conversorDeMoedas.gif?raw=true"  alt="Conversor de Moedas"/>
     </td>
     <br>
     <td align="center">
-        <p align="center">Cinetag favorite page</p>
-      <img src="https://github.com/florencioMath/Course-CineTag/blob/main/readmeFiles/cinetagFavorito.gif?raw=true" alt="Cinetag favorite page" />
+        <p align="center">Mentalista</p>
+      <img src="https://github.com/florencioMath/Challenge-imersao-dev-6/blob/main/readmeFiles/imersaoDev6-mentalista.gif?raw=true" alt="Mentalista" />
     </td>
     <br>
     <td align="center">
-        <p align="center">Cinetag video page</p>
-      <img src="https://github.com/florencioMath/Course-CineTag/blob/main/readmeFiles/cinetagPaginaVideo.gif?raw=true" alt="Cinetag video page" />
+        <p align="center">Aluraflix</p>
+      <img src="https://github.com/florencioMath/Challenge-imersao-dev-6/blob/main/readmeFiles/imersaoDev6-aluraflix.gif?raw=true" alt="Aluraflix" />
+    </td>
+    <br>
+    <td align="center">
+        <p align="center">Aluraflix Favoritos</p>
+      <img src="https://github.com/florencioMath/Challenge-imersao-dev-6/blob/main/readmeFiles/imersaoDev6-aluraflixFavoritos.gif?raw=true" alt="Aluraflix Favoritos" />
+    </td>
+    <br>
+    <td align="center">
+        <p align="center">Tabela de Classificação</p>
+      <img src="https://github.com/florencioMath/Challenge-imersao-dev-6/blob/main/readmeFiles/imersaoDev6-tabelaDeClassificacao.gif?raw=true" alt="Tabela de Classificação" />
     </td>
   </tr>
--->
   </details>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
