@@ -6,7 +6,7 @@ export function Footer() {
       <img
         src={logoAlura}
         alt='Logo da Imersão dev com Alura'
-        className='w-1/3 max-h-44'
+        className='max-w-[240px] max-h-28'
       />
     </div>
   );
